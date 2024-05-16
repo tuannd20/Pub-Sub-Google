@@ -36,9 +36,16 @@ To create this custom subscription, click on CREATE SUBSCRIPTION button and crea
 # Step 3: Setting up a Service Account for Google Cloud Pub/Sub
 
 Cloud Pub/Sub requires that you grant Google Play privileges to publish notifications to your topic.
-![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/c4c57542-79de-4aff-97ec-e14c450d29db)
-
 [**In case there is Service Account**]
+- Click to view permissions -> go to click button Add principal to grant new access.
+    ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/c4c57542-79de-4aff-97ec-e14c450d29db)
+
+- Select account has been created previously and is already in use with the Google Play Console
+- Example: with app drone have use service account [**goflyserviceaccount@go-fly-for-dji.iam.gserviceaccount.com**], so use this account to grant it the role of Pub/Sub Publisher.
+    ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/0cae95a0-0cd7-4273-9a2e-258307e92271)
+
+- In Assign Roles -> select Pub/Sub Admin
+    ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/e03f60ac-67b3-46f3-94a1-91d5ff3267f9)
 
 
 [**In case there is no Service Account**]
