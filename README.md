@@ -15,6 +15,7 @@ To begin using Google Cloud Pub/Sub, we must first configure and create a Google
     ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/dd972315-e894-47aa-9383-f00ff98213ed)
 - This action will create our topic and a default subscription named will be automaticallygenerated since we left the Add default subscription box checked.
      ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/f9fdb890-c082-4509-bf41-e5788b07a3b1)
+  
   Subscriptions define how messages are delivered to subscribers, and specifying the delivery type is crucial for receiving real-time updates. Next, we will create two subscriptions with delivery types pull and push for our subscribers to connect with a topic.
 
 # Step 2: Create a Pub/Sub subscription
@@ -35,6 +36,7 @@ To enable Real-time developer notifications for your app, do the following:
 4. Scroll to the Real-time developer notifications section at the top of the page.
 
   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/88c5a657-488b-4730-918b-ddff7b159566)
+  
 5. Check Enable real-time notifications.
 6. In the Topic name field, enter the full Cloud Pub/Sub topic name that you configured earlier. The topic name should be in the format of projects/{project_id}/topics/{topic_name} where project_id is the unique identifier for your project, and topic_name is the name of the topic created earlier.
 7. Click Send Test Message to send a test message. Performing a test publish helps to ensure that everything is set up and configured properly. If the test publish succeeds, a message is displayed stating that the test publish was successful. If you have attached a subscription for this topic, you should receive the test message.
