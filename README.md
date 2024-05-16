@@ -3,12 +3,12 @@
 [Docs](https://developer.android.com/google/play/billing/getting-ready#configure-rtdn)
 
 ## Table of Contents
-1. [**Step 1: Setup Cloud Pub/Sub.**](#step 1: Setup Cloud Pub/Sub.)
-2. [**Step 2: Create a Pub/Sub subscription**](#Step 2: Create a Pub/Sub subscription)
-3. [**Usage**](#usage)
-4. [**Features**](#features)
+1. [**Step 1: Setup Cloud Pub/Sub.**](#Setup Cloud Pub/Sub.)
+2. [**Step 2: Create a Pub/Sub subscription.**]
+3. [**Step 3: Setting up a Service Account for Google Cloud Pub/Sub.**]
+4. [**Step 4: Enable Real-time developer notifications for your app.**]
 
-## Step 1: Setup Cloud Pub/Sub.
+## Step 1: **Setup Cloud Pub/Sub.**
 Google Cloud Pub/Sub is a scalable message queuing service that ensures asynchronous and reliable messaging between various applications and services. It offers flexibility, supporting one-to-many, many-to-one, and many-to-many communication patterns. This service is designed to track changes in different applications and communicate these updates to diverse systems in real-time.
 To begin using Google Cloud Pub/Sub, we must first configure and create a Google Cloud Pub/Sub instance. Here are the steps to do this:
 - Login To [Google Cloud Console](https://console.cloud.google.com/)
@@ -25,7 +25,7 @@ To begin using Google Cloud Pub/Sub, we must first configure and create a Google
   
   Subscriptions define how messages are delivered to subscribers, and specifying the delivery type is crucial for receiving real-time updates. Next, we will create two subscriptions with delivery types pull and push for our subscribers to connect with a topic.
 
-## Step 2: Create a Pub/Sub subscription
+## Step 2: Create a Pub/Sub subscription.
 Read the [Cloud Pub/Sub Subscriber Guide](https://cloud.google.com/pubsub/subscriber) to determine whether to configure the subscription as either a push subscription or a pull subscription.
   - A push subscription allows Cloud Pub/Sub to send notifications to your secure backend by issuing HTTPS requests.
   - A pull subscription requires your secure backend server to initiate requests to the Cloud Pub/Sub server to retrieve messages.
@@ -40,7 +40,7 @@ To create this custom subscription, click on CREATE SUBSCRIPTION button and crea
    ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/93f8a5c0-75c4-43a9-92c3-fada1c9737ee)
 
 
-# Step 3: Setting up a Service Account for Google Cloud Pub/Sub
+## Step 3: Setting up a Service Account for Google Cloud Pub/Sub.
 
 Cloud Pub/Sub requires that you grant Google Play privileges to publish notifications to your topic.
 [**In case there is Service Account**]
@@ -79,7 +79,7 @@ In the Google Cloud Console, go to the IAM & Admin section using the search bar.
 
   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/17b527c8-2e07-4261-83e0-8bd3c9085996)
 
-# Step 4: Enable Real-time developer notifications for your app.
+## Step 4: Enable Real-time developer notifications for your app.
 To enable Real-time developer notifications for your app, do the following:
 1. Open the [Google Play Console](https://play.google.com/console/).
 2. Select your app.
