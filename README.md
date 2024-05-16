@@ -1,5 +1,12 @@
 # Pub-Sub-Google - Configure Real-time developer notifications
 [Cloud Pub/Sub](https://cloud.google.com/pubsub/) is a fully-managed real-time messaging service that you can use to send and receive messages between independent applications. Google Play uses Cloud Pub/Sub to publish push notifications on topics to which you subscribe.
+[Docs](https://developer.android.com/google/play/billing/getting-ready#configure-rtdn)
+
+## Table of Contents
+1. [**Setup Cloud Pub/Sub**](#Step 1: Setup Cloud Pub/Sub.)
+2. [**Create a Pub/Sub subscription**](#Step 2: Create a Pub/Sub subscription)
+3. [**Usage**](#usage)
+4. [**Features**](#features)
 
 # Step 1: Setup Cloud Pub/Sub.
 Google Cloud Pub/Sub is a scalable message queuing service that ensures asynchronous and reliable messaging between various applications and services. It offers flexibility, supporting one-to-many, many-to-one, and many-to-many communication patterns. This service is designed to track changes in different applications and communicate these updates to diverse systems in real-time.
