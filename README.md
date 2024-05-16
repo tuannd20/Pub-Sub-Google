@@ -3,7 +3,7 @@
 [Docs](https://developer.android.com/google/play/billing/getting-ready#configure-rtdn)
 
 ## Table of Contents
-1. [**Step 1: Setup Cloud Pub/Sub.**](#Step 1: Setup Cloud Pub/Sub.)
+1. [**Step 1: Setup Cloud Pub/Sub.**](#step 1: Setup Cloud Pub/Sub.)
 2. [**Step 2: Create a Pub/Sub subscription**](#Step 2: Create a Pub/Sub subscription)
 3. [**Usage**](#usage)
 4. [**Features**](#features)
