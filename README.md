@@ -3,12 +3,12 @@
 [Docs](https://developer.android.com/google/play/billing/getting-ready#configure-rtdn)
 
 ## Table of Contents
-1. [**Setup Cloud Pub/Sub**](#Step 1: Setup Cloud Pub/Sub.)
-2. [**Create a Pub/Sub subscription**](#Step 2: Create a Pub/Sub subscription)
+1. [**Setup Cloud Pub/Sub**](#Setup Cloud Pub/Sub.)
+2. [**Create a Pub/Sub subscription**](#Create a Pub/Sub subscription)
 3. [**Usage**](#usage)
 4. [**Features**](#features)
 
-# Step 1: Setup Cloud Pub/Sub.
+## Step 1: Setup Cloud Pub/Sub.
 Google Cloud Pub/Sub is a scalable message queuing service that ensures asynchronous and reliable messaging between various applications and services. It offers flexibility, supporting one-to-many, many-to-one, and many-to-many communication patterns. This service is designed to track changes in different applications and communicate these updates to diverse systems in real-time.
 To begin using Google Cloud Pub/Sub, we must first configure and create a Google Cloud Pub/Sub instance. Here are the steps to do this:
 - Login To [Google Cloud Console](https://console.cloud.google.com/)
@@ -25,7 +25,7 @@ To begin using Google Cloud Pub/Sub, we must first configure and create a Google
   
   Subscriptions define how messages are delivered to subscribers, and specifying the delivery type is crucial for receiving real-time updates. Next, we will create two subscriptions with delivery types pull and push for our subscribers to connect with a topic.
 
-# Step 2: Create a Pub/Sub subscription
+## Step 2: Create a Pub/Sub subscription
 Read the [Cloud Pub/Sub Subscriber Guide](https://cloud.google.com/pubsub/subscriber) to determine whether to configure the subscription as either a push subscription or a pull subscription.
   - A push subscription allows Cloud Pub/Sub to send notifications to your secure backend by issuing HTTPS requests.
   - A pull subscription requires your secure backend server to initiate requests to the Cloud Pub/Sub server to retrieve messages.
