@@ -23,12 +23,49 @@ Read the [Cloud Pub/Sub Subscriber Guide](https://cloud.google.com/pubsub/subscr
   - A push subscription allows Cloud Pub/Sub to send notifications to your secure backend by issuing HTTPS requests.
   - A pull subscription requires your secure backend server to initiate requests to the Cloud Pub/Sub server to retrieve messages.
 To create this custom subscription, click on CREATE SUBSCRIPTION button and create a pull or push subscriptions following the steps in the upcoming sections.
+- Create a Pull Subscription
+   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/9b1ea6b0-450f-45b2-b315-971f9d79c68b)
+-  Enable Pub/Sub API for our project
+   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/9a8779ee-954e-456c-a4c2-26f723700fbe)
+
+   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/86befdf0-e253-420f-8a2b-558f73e9323a)
+
+   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/93f8a5c0-75c4-43a9-92c3-fada1c9737ee)
 
 
+# Step 3: Setting up a Service Account for Google Cloud Pub/Sub
+
+Cloud Pub/Sub requires that you grant Google Play privileges to publish notifications to your topic.
+![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/c4c57542-79de-4aff-97ec-e14c450d29db)
+
+[**In case there is Service Account**]
 
 
+[**In case there is no Service Account**]
+In the Google Cloud Console, go to the IAM & Admin section using the search bar.
+  ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/8d6985a0-e7a6-4572-ba67-314c7dec4ea6)
 
-# Step 5: Enable Real-time developer notifications for your app.
+- Then click Create Service Account button.
+  ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/bd200cb4-1c4f-4aeb-b4d2-be3307837b69)
+
+- Enter a service account name nodejs_app-pub-sub and description then click on the CREATE AND CONTINUE button
+- Example: Add the service account google-play-developer-notifications@system.gserviceaccount.com, and grant it the role of Pub/Sub Publisher.
+  ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/474b76e6-81e3-40ca-a048-db6784f483e4)
+
+- Next, to give us full access to topics and subscriptions, filter and assign the role Pub/Sub Admin to our service account nodejs_app-pub-sub. After that, click the Continue button.
+   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/5fe41217-4045-4093-8d11-cb841c732fe9)
+
+- We can skip the Grant users access to this service account option since we are not giving access to other users or groups in this article. Finally, click on the Done button.
+- This should redirect us to the Service accounts page.
+   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/7118945f-6646-48dd-b3f1-198b8e788fb8)
+
+- Next, click to open the newly created service account and locate the key section.
+
+- Click on Add Key, then select Create new Key, choose the JSON option, and [**download the JSON file**]. This file is essential for authentication within our Node.js project directory for our Pub/Sub setup.
+
+  ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/17b527c8-2e07-4261-83e0-8bd3c9085996)
+
+# Step 4: Enable Real-time developer notifications for your app.
 To enable Real-time developer notifications for your app, do the following:
 1. Open the [Google Play Console](https://play.google.com/console/).
 2. Select your app.
