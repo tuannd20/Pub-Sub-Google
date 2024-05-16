@@ -8,7 +8,7 @@
 3. [**Step 3: Setting up a Service Account for Google Cloud Pub/Sub.**]
 4. [**Step 4: Enable Real-time developer notifications for your app.**]
 
-## **Step 1: Setup Cloud Pub/Sub.**
+## 1. **Step 1: Setup Cloud Pub/Sub.**
 Google Cloud Pub/Sub is a scalable message queuing service that ensures asynchronous and reliable messaging between various applications and services. It offers flexibility, supporting one-to-many, many-to-one, and many-to-many communication patterns. This service is designed to track changes in different applications and communicate these updates to diverse systems in real-time.
 To begin using Google Cloud Pub/Sub, we must first configure and create a Google Cloud Pub/Sub instance. Here are the steps to do this:
 - Login To [Google Cloud Console](https://console.cloud.google.com/)
