@@ -5,7 +5,7 @@
 ## Table of Contents
 1. [**Step 1:Setup Cloud Pub/Sub.**]
 2. [**Step 2: Create a Pub/Sub subscription.**]
-3. [**Step 3: Setting up a Service Account for Google Cloud Pub/Sub.**]
+3. [**Step 3: Setting up a Service Account for Topic of Google Cloud Pub/Sub.**]
 4. [**Step 4: Enable Real-time developer notifications for your app.**]
 
 ## **Step 1**: Setup Cloud Pub/Sub.
@@ -40,44 +40,21 @@ To create this custom subscription, click on CREATE SUBSCRIPTION button and crea
    ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/93f8a5c0-75c4-43a9-92c3-fada1c9737ee)
 
 
-## Step 3: Setting up a Service Account for Google Cloud Pub/Sub.
+## Step 3: Setting up a Service Account for Topic of Google Cloud Pub/Sub.
+Use account default: google-play-developer-notifications@system.gserviceaccount.com
+1. select topic -> click on View permissions
+![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/ab20c621-35e2-40f5-9135-0533bc6749e4)
 
-Cloud Pub/Sub requires that you grant Google Play privileges to publish notifications to your topic.
-[**In case there is Service Account**]
-- Click to view permissions -> go to click button Add principal to grant new access.
-    ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/c4c57542-79de-4aff-97ec-e14c450d29db)
+2. In the sidebar click button Add Principals
+![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/a12e9062-348d-4f51-9fc8-3f9609608be1)
 
-- Select account has been created previously and is already in use with the Google Play Console to input at Add principals section of image below.
-- Example: with app drone have use service account [**goflyserviceaccount@go-fly-for-dji.iam.gserviceaccount.com**], so use this account to grant it the role of Pub/Sub Publisher and Enter this account in the input box of the Add principals section
-    ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/0cae95a0-0cd7-4273-9a2e-258307e92271)
+3. Fill in the information in the acc box as shown below:
+Enter the account as **google-play-developer-notifications@system.gserviceaccount.com**
+![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/0d805149-e40c-428d-83bb-2f3af548b91c)
 
-- In Assign Roles -> select Pub/Sub Admin
-    ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/e03f60ac-67b3-46f3-94a1-91d5ff3267f9)
+Select role for account is **Pub/Sub Publisher** -> then click button **SAVE**
+![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/ad81c1c3-e673-47e2-bd28-9184db87102d) 
 
-
-[**In case there is no Service Account**]
-In the Google Cloud Console, go to the IAM & Admin section using the search bar.
-  ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/8d6985a0-e7a6-4572-ba67-314c7dec4ea6)
-
-- Then click Create Service Account button.
-  ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/bd200cb4-1c4f-4aeb-b4d2-be3307837b69)
-
-- Enter a service account name nodejs_app-pub-sub and description then click on the CREATE AND CONTINUE button
-- Example: Add the service account google-play-developer-notifications@system.gserviceaccount.com, and grant it the role of Pub/Sub Publisher.
-  ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/474b76e6-81e3-40ca-a048-db6784f483e4)
-
-- Next, to give us full access to topics and subscriptions, filter and assign the role Pub/Sub Admin to our service account nodejs_app-pub-sub. After that, click the Continue button.
-   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/5fe41217-4045-4093-8d11-cb841c732fe9)
-
-- We can skip the Grant users access to this service account option since we are not giving access to other users or groups in this article. Finally, click on the Done button.
-- This should redirect us to the Service accounts page.
-   ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/7118945f-6646-48dd-b3f1-198b8e788fb8)
-
-- Next, click to open the newly created service account and locate the key section.
-
-- Click on Add Key, then select Create new Key, choose the JSON option, and [**download the JSON file**]. This file is essential for authentication within our Node.js project directory for our Pub/Sub setup.
-
-  ![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/17b527c8-2e07-4261-83e0-8bd3c9085996)
 
 ## Step 4: Enable Real-time developer notifications for your app.
 To enable Real-time developer notifications for your app, do the following:
@@ -97,3 +74,10 @@ If the publish fails, an error is shown. Ensure that the topic name is correct a
 - [Get notifications for subscriptions and all voided purchases - receive real-time developer notifications related to subscriptions and voided purchases. You won't receive notifications for one-time product purchases.]
 - [Get all notifications for subscriptions and one-time products - receive notifications for all subscription and voided purchase events. You'll also receive one-time product purchase events, such as ONE_TIME_PRODUCT_PURCHASED and ONE_TIME_PRODUCT_CANCELED. See One-time purchase lifecycle to learn more about these purchase events.]
 9. Click Save changes.
+
+# Check message After clicking send notification successfully
+Sau khi gửi thành công test notification thì quay lại trang Pub/sub của google cloud. Chọn vào topic trước đó và chọn tiếp vào Subscription của topic đó.
+![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/4d2a783e-4b61-4af7-aed4-248607047017)
+
+Trong trang của Subscription này thì chọn qua tab MESSAGES và click vào button PULL để xem được thông báo vừa được gửi ở bên google play console.
+![image](https://github.com/tuannd20/Pub-Sub-Google/assets/74279060/6a73f891-7a75-467f-8930-0b980084a730)
